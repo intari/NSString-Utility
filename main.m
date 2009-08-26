@@ -20,6 +20,9 @@
 	
 	for (int i = 0; i < 20; i++)
 		CFShow([@"hello" stringByAppendingRandomStringOfRandomLength]);
+	
+	NSString *foo = @"Hello World";
+	printf("%s", foo.UTF8String);
 }
 
 - (void) loadView

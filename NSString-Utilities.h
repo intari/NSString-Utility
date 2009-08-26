@@ -14,5 +14,8 @@
 + (NSString *) commasForNumber: (long long) num;
 @property (readonly) NSString *trimmedString;
 @property (readonly) NSDate *date;
+@end
+
+@interface NSString (UTF8String)
 @property (readonly) char *UTF8String; // a favorite!
 @end
