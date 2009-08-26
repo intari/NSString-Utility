@@ -11,6 +11,7 @@
 - (NSString *) stringByAppendingRandomStringOfRandomLength;
 - (int) occurrencesOfString: (NSString *) aString;
 - (NSDate *) date;
++ (NSString *) commasForNumber: (long long) num;
 @property (readonly) NSString *trimmedString;
 @property (readonly) NSDate *date;
 @property (readonly) char *UTF8String; // a favorite!

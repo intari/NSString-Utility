@@ -47,8 +47,15 @@
 	// Return a date from a string
 	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
 	formatter.dateFormat = @"MM-dd-yyyy";
-	NSDate *date = [formatter dateFromString:aString];
+	NSDate *date = [formatter dateFromString:self];
 	return date;
+}
+
+// return a comma delimited string
++ (NSString *) commasForNumber: (long long) num
+{
+	if (num < 1000) return [NSString stringWithFormat:@"%d", num];
+	return	[[self commasForNumber:num/1000] stringByAppendingFormat:@",%03d", (num % 1000)];
 }
 @end
 
